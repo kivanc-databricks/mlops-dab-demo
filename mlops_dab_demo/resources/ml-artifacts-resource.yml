@@ -48,7 +48,7 @@ resources:
   registered_models:
       model:
         name: ${var.model_name}
-        catalog_name: ${bundle.target}
+        catalog_name: ${var.catalog_name}_${bundle.target}
         schema_name: mlops-dab-demo     
         <<: *grants
         depends_on:
