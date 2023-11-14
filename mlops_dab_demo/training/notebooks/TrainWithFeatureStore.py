@@ -253,8 +253,8 @@ mlflow.lightgbm.autolog()
 train_lgb_dataset = lgb.Dataset(X_train, label=y_train.values)
 test_lgb_dataset = lgb.Dataset(X_test, label=y_test.values)
 
-param = {"num_leaves": 32, "objective": "regression", "metric": "rmse"}
-num_rounds = 100
+param = {"num_leaves": 8, "objective": "regression", "metric": "rmse"}
+num_rounds = 50
 
 # Train a lightGBM model
 model = lgb.train(param, train_lgb_dataset, num_rounds)
